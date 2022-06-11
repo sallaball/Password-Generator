@@ -28,7 +28,7 @@ var upperCase = [
   "X",
   "Y",
   "Z",
-
+]
   var lowerCase = [
     "a",
     "b",
@@ -102,7 +102,9 @@ var upperCase = [
     "`",
 
   ]
-]
+
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
