@@ -28,7 +28,7 @@ var upperCase = [
   "X",
   "Y",
   "Z",
-]
+];
   var lowerCase = [
     "a",
     "b",
@@ -56,7 +56,7 @@ var upperCase = [
     "x",
     "y",
     "z",
-  ]
+  ];
 
   var numbers = [
     "1",
@@ -68,7 +68,7 @@ var upperCase = [
     "7",
     "8",
     "9",
-  ]
+  ];
   
   var specialCharaters = [
     "!",
@@ -101,7 +101,15 @@ var upperCase = [
     "~",
     "`",
 
-  ]
+  ];
+
+
+function shuffle(array) {
+  var randomizeIndex = Math.floor(Math.random() * array.lenght);
+  var convertedElement = array[randomizeIndex];
+  return convertedElement;
+  
+}
 
 
 
