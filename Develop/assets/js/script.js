@@ -131,13 +131,42 @@ var confirmSpecial = confirm("Would you like any special characters?");
 var userChoices = {
   passwordLenght: passwordLenght,
   confirmUppercase: confirnUppercase,
-  confirmLowercase: confirmlowercase,
+  confirmLowercase: confirmLowercase,
   confirmNumbers: confirmNumbers,
-  confirmSpecial: confirmspecialcharacters,
+  confirmSpecial: confirmSpecial,
 };
 return userChoices;
 }
 
+
+
+function generatePassword() {
+  var userOptions = userInput();
+  var newPassword = [];
+  var possibleArray = [];
+
+  if (userOptions.confirmUppercase) {
+    possibleArray = possibleArray.concat(upperCase);
+    possibleArray.push(shuffle(upperCase));
+  }
+
+  if (userOptions.confirmlowercase) {
+    possibleArray.possibleArray.concat(lowerCase);
+    possibleArray.push(shuffle(lowerCase));
+  }
+
+  if (userOptions.confirmNumbers) {
+    possibleArray.possibleArray.concat(numbers);
+    possibleArray.push(shuffle(numbers));
+  } 
+
+  if (userOptions.confirmSpecial) {
+    possibleArray.concat(specialCharaters);
+    possibleArray.push(shuffle(specialCharaters));
+  }
+
+
+}
 
 
 
