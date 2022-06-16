@@ -111,6 +111,34 @@ function shuffle(array) {
   
 }
 
+function userInput() {
+  var passwordLength = parseInt(prompt["How long would you like the password to be"]);
+  if (passwordLenght < 8) {
+    alert("Password Must be at least 8 characters long.");
+  return;
+  }
+if (passwordLength > 128) {
+  alert("Password Must be less than 128 characters long.");
+  return;
+}
+
+var confirmUppercase = confirm("Would you like uppercase letters?");
+var confirmLowercase = confirm("Would you like lowercase letters?");
+var confirmNumbers = confirm("Would you like any numbers?");
+var confirmSpecial = confirm("Would you like any special characters?");
+
+
+var userChoices = {
+  passwordLenght: passwordLenght,
+  confirmUppercase: confirnUppercase,
+  confirmLowercase: confirmlowercase,
+  confirmNumbers: confirmNumbers,
+  confirmSpecial: confirmspecialcharacters,
+};
+return userChoices;
+}
+
+
 
 
 
