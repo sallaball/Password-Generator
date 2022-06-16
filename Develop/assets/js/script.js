@@ -1,7 +1,7 @@
 // Assignment code here
 // Arrays
 
-var upperCase = [
+var UpperCase = [
   "A",
   "B",
   "C",
@@ -112,25 +112,25 @@ function shuffle(array) {
 }
 
 function userInput() {
-  var passwordLength = parseInt(prompt["How long would you like the password to be"]);
-  if (passwordLenght < 8) {
+  var passwordLength = parseInt(prompt("How long would you like the password to be"));
+  if (passwordLength < 8) {
     alert("Password Must be at least 8 characters long.");
-  return;
+  return userInput();
   }
 if (passwordLength > 128) {
   alert("Password Must be less than 128 characters long.");
-  return;
+  return userInput();
 }
 
-var confirmUppercase = confirm("Would you like uppercase letters?");
+var confirmUpperCase = confirm("Would you like UpperCase letters?");
 var confirmLowercase = confirm("Would you like lowercase letters?");
 var confirmNumbers = confirm("Would you like any numbers?");
 var confirmSpecial = confirm("Would you like any special characters?");
 
 
 var userChoices = {
-  passwordLenght: passwordLenght,
-  confirmUppercase: confirnUppercase,
+ passwordLength:passwordLength,
+  confirmUpperCase: confirmUpperCase,
   confirmLowercase: confirmLowercase,
   confirmNumbers: confirmNumbers,
   confirmSpecial: confirmSpecial,
@@ -145,12 +145,12 @@ function generatePassword() {
   var newPassword = [];
   var possibleArray = [];
 
-  if (userOptions.confirmUppercase) {
-    possibleArray = possibleArray.concat(upperCase);
-    possibleArray.push(shuffle(upperCase));
+  if (userOptions.confirmUpperCase) {
+    possibleArray = possibleArray.concat(UpperCase);
+    possibleArray.push(shuffle(UpperCase));
   }
 
-  if (userOptions.confirmlowercase) {
+  if (userOptions.confirmLowercase) {
     possibleArray.possibleArray.concat(lowerCase);
     possibleArray.push(shuffle(lowerCase));
   }
@@ -165,8 +165,14 @@ function generatePassword() {
     possibleArray.push(shuffle(specialCharaters));
   }
 
+  for (var i= 0; i < userOptions.passwordpasswordLength; i++) {
+    var readyPossibleArray = shuffle(possibleArray);
+    newPassword.push(readyPossibleArray);
+    newPassword.push(readyPossibleArray);
+  }
+  return newPassword.join("");
+  }
 
-}
 
 
 
